@@ -1,0 +1,48 @@
+# Chapter 5 Data analysis of the Human data
+Created on 01.12.2017  
+@author: Xiaodong Li  
+Email: xiaodaong.li@helsinki.fi  
+
+## Abstract  
+
+This is the script for RStudio exercise 5 -- Dimensionality reduction technique   
+
+## Data discirption  
+The `human` dataset originates from the United Nations Development Programme. The data describes the Human Development Index (HDI) and Gross National Income (GNI) situation in different countries together with the education, labour and health experiences. The goal is to show that the people and the their capabilities should be the ultimate criteria for assessing the development of a country, not economic growth alone. 
+## Methods used for data analysis  
+
+## Data analysis
+
+### step 0: Import packages  
+
+### Step 1: Read and explore data  
+The `human` data was created by the script 
+```{r}
+human = read.table('/home/xiaodong/IODS_course/IODS-project/data/human.txt',sep='\t',header = TRUE)
+str(human)
+dim(human)
+```
+
+The meaning of different variables are shown below:  
+
+* `Edu2.FM`: The ratio of Female and Male populations with secondary education  
+
+* `Labo.FM`: The ratio of labour force participation of females and males  
+
+* `life.Exp`: Life expectancy at birth  
+
+* `Edu.Exp`: Expected years of education  
+
+* `GNI`: Gross national income per capita  
+
+* `Mat.Mor`: Maternal mortality ratio  
+
+* `Ado.Birth`: Adolescent birth rate  
+
+* `Parli.F`: Percent Representation in Parliament n  
+
+
+
+
+
+
