@@ -2,7 +2,9 @@
 #@author: Xiaodong Li  
 #Email: xiaodong.li@helsinki.fi
 #This is the script for the final assignment of IODS course -- Data wrangling
-#The data originates from the United Nations Development Programme. The data describes the Human Development Index (HDI) and Gross National Income (GNI) situation in different countries together with the education, labour and health experiences. The goal is to show that the people and the their capabilities should be the ultimate criteria for assessing the development of a country, not economic growth alone. 
+#The data originates from the United Nations Development Programme. 
+#The data describes the Human Development Index (HDI) and Gross National Income (GNI) situation in different countries together with the education, labour and health experiences. 
+#The goal is to show that the people and the their capabilities should be the ultimate criteria for assessing the development of a country, not economic growth alone. 
 #
 
 library(dplyr)
@@ -53,3 +55,11 @@ human=human_[-1]
 # Save data
 setwd('/home/xiaodong/IODS_course/IODS-final/Data')
 write.table(human,file='human.txt',row.names=T,sep = '\t')
+
+
+# Define a new logical column 'Long.life'
+human_long_life=mutate(human, Long.life=Life.Exp>75)
+
+# Save data with logical column 'Long.life'
+write.table(human_long_life, file='human_long_life.txt',row.names=T,sep='\t')
+
